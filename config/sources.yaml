@@ -1,0 +1,105 @@
+# EPA TRI Tracker — Data Source Configuration
+
+sources:
+  epa_tri:
+    name: "EPA Toxic Release Inventory"
+    description: "Facility-level toxic chemical release data reported annually under EPCRA Section 313"
+    base_url: "https://data.epa.gov/efservice/downloads/tri"
+    # URL pattern: /mv_tri_basic_download/{year}_{state}/csv
+    format: csv
+    frequency: annual
+    available_years: [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
+    rate_limit_seconds: 2
+    notes: "Self-reported by facilities. Under-reporting is a known issue."
+
+  county_health_rankings:
+    name: "County Health Rankings & Roadmaps"
+    description: "Annual county-level health outcomes and health factors from Robert Wood Johnson Foundation / UW Population Health Institute"
+    base_url: "https://www.countyhealthrankings.org"
+    format: csv
+    frequency: annual
+    notes: "12.8MB CSV confirmed downloadable. Health outcomes, behaviors, clinical care, social/economic factors."
+
+  census_acs:
+    name: "American Community Survey (Census Bureau)"
+    description: "5-year estimates of demographics, income, poverty, education by county and tract"
+    base_url: "https://api.census.gov/data"
+    format: json_api
+    frequency: annual
+    api_key_required: false
+    notes: "Free API. Key fields: B01001 (age/sex), B19013 (median income), B17001 (poverty), B03002 (race/ethnicity)."
+
+  epa_ejscreen:
+    name: "EPA EJScreen"
+    description: "Environmental justice screening indicators at census tract/block group level"
+    base_url: "https://gaftp.epa.gov/EJScreen"
+    format: csv
+    notes: "Downloadable CSV. Indicators include PM2.5, ozone, diesel PM, cancer risk, proximity metrics."
+
+  epa_iris:
+    name: "EPA Integrated Risk Information System"
+    description: "Chemical-specific toxicity and carcinogenicity assessments"
+    base_url: "https://iris.epa.gov"
+    format: reference
+    notes: "Used as reference lookup for carcinogen classification by CAS number."
+
+# States to process (top 10 TRI reporters by volume + all others)
+priority_states:
+  tier_1:  # Highest TRI reporting volume — process first
+    - TX
+    - OH
+    - IN
+    - PA
+    - LA
+    - IL
+    - AL
+    - MI
+    - NC
+    - TN
+  tier_2:  # Remaining states — process after tier 1
+    - AK
+    - AZ
+    - AR
+    - CA
+    - CO
+    - CT
+    - DE
+    - FL
+    - GA
+    - HI
+    - ID
+    - IA
+    - KS
+    - KY
+    - ME
+    - MD
+    - MA
+    - MN
+    - MS
+    - MO
+    - MT
+    - NE
+    - NV
+    - NH
+    - NJ
+    - NM
+    - NY
+    - ND
+    - OK
+    - OR
+    - RI
+    - SC
+    - SD
+    - UT
+    - VT
+    - VA
+    - WA
+    - WV
+    - WI
+    - WY
+    - DC
+    - PR
+    - VI
+    - GU
+    - AS
+    - MP

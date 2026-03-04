@@ -1,0 +1,49 @@
+# Industry sector classification for TRI facilities
+# Mapped from SIC codes
+
+industry_sectors:
+  chemicals:
+    sic_range: [2800, 2899]
+    label: "Chemical Manufacturing"
+  petroleum:
+    sic_range: [2900, 2999]
+    label: "Petroleum Refining"
+  primary_metals:
+    sic_range: [3300, 3399]
+    label: "Primary Metals"
+  paper:
+    sic_range: [2600, 2699]
+    label: "Paper & Allied Products"
+  plastics:
+    sic_range: [3080, 3089]
+    label: "Plastics Products"
+  electronics:
+    sic_range: [3600, 3699]
+    label: "Electronic Equipment"
+  transportation_equipment:
+    sic_range: [3700, 3799]
+    label: "Transportation Equipment"
+  food_processing:
+    sic_range: [2000, 2099]
+    label: "Food Processing"
+  mining:
+    sic_range: [1000, 1499]
+    label: "Mining"
+  utilities:
+    sic_range: [4900, 4999]
+    label: "Electric & Gas Utilities"
+  waste_management:
+    sic_range: [4950, 4959]
+    label: "Waste Management"
+  fabricated_metals:
+    sic_range: [3400, 3499]
+    label: "Fabricated Metal Products"
+  rubber:
+    sic_range: [3000, 3099]
+    label: "Rubber & Plastics"
+  stone_clay_glass:
+    sic_range: [3200, 3299]
+    label: "Stone, Clay, Glass & Concrete"
+  lumber_wood:
+    sic_range: [2400, 2499]
+    label: "Lumber & Wood Products"

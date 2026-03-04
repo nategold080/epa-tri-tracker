@@ -1,0 +1,22 @@
+data/raw/
+data/exports/
+data/cache/
+data/*.db-wal
+data/*.db-shm
+tests/
+__pycache__/
+.pytest_cache/
+*.pyc
+docs/
+outreach/
+scripts/
+*.zip
+*.gz
+
+# Override root .gitignore *.db exclusion
+!data/*.db
+
+# Exclude full DB backups (too large for Railway)
+data/*_full.db
+# Also exclude epa_tri.db (0 bytes)
+data/epa_tri.db
