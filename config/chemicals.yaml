@@ -1,0 +1,38 @@
+# Chemical classification reference
+# Based on EPA IRIS and NTP Report on Carcinogens
+
+carcinogen_groups:
+  known_human:
+    description: "Known to be human carcinogens (IARC Group 1, NTP Known)"
+    examples:
+      - "BENZENE"
+      - "FORMALDEHYDE"
+      - "VINYL CHLORIDE"
+      - "ARSENIC COMPOUNDS"
+      - "CADMIUM COMPOUNDS"
+      - "CHROMIUM COMPOUNDS"
+      - "NICKEL COMPOUNDS"
+      - "ASBESTOS"
+      - "1,3-BUTADIENE"
+
+  probable_human:
+    description: "Reasonably anticipated to be human carcinogens (IARC Group 2A, NTP Reasonably Anticipated)"
+    examples:
+      - "LEAD COMPOUNDS"
+      - "TRICHLOROETHYLENE"
+      - "TETRACHLOROETHYLENE"
+      - "STYRENE"
+      - "ETHYLENE OXIDE"
+
+# Chemical categories for aggregation
+chemical_categories:
+  metals:
+    keywords: ["LEAD", "MERCURY", "CADMIUM", "CHROMIUM", "ARSENIC", "NICKEL", "ZINC", "COPPER", "MANGANESE", "COBALT", "BARIUM", "SELENIUM"]
+  volatile_organic_compounds:
+    keywords: ["TOLUENE", "XYLENE", "BENZENE", "STYRENE", "METHANOL", "ETHANOL", "ACETONE", "METHYL ETHYL KETONE"]
+  persistent_organic_pollutants:
+    keywords: ["DIOXIN", "FURAN", "PCB", "POLYCHLORINATED"]
+  acids:
+    keywords: ["HYDROCHLORIC ACID", "SULFURIC ACID", "NITRIC ACID", "PHOSPHORIC ACID", "HYDROFLUORIC ACID"]
+  solvents:
+    keywords: ["TRICHLOROETHYLENE", "METHYLENE CHLORIDE", "PERCHLOROETHYLENE", "CARBON TETRACHLORIDE"]
